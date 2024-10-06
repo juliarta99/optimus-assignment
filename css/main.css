@@ -1,0 +1,22 @@
+::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #F5D061;
+}
+.animate-in-out::before{
+    animation: animate-in-out 3s ease-in-out infinite alternate;
+}
+.animate-in-out::after{
+    animation-delay: 1.5s;
+    animation: animate-in-out 3s ease-in-out infinite alternate;
+}
+@keyframes animate-in-out {
+    0%{
+        transform: translate(50%, 50%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="public/icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliarta</title>
+    <script src="https://kit.fontawesome.com/4a76f15280.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F5D061'
+                    }
+                },
+                fontFamily: {
+                    poppins : ["'Poppins'", 'sans-serif']
+                },
+                container: {
+                padding: {
+                    DEFAULT: '1rem',
+                    sm: '2rem',
+                    lg: '4rem',
+                    xl: '5rem',
+                    '2xl': '6rem',
+                },
+                },
+            },
+        }
+      </script>
+</head>
+<body class="font-poppins bg-slate-100 dark:bg-slate-900">
+    <nav class="border-gray-20 fixed w-full z-[999] dark:bg-slate-900 backdrop-blur-2xl">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html#home" class="flex items-center">
+                <span class="self-center text-2xl text-black font-semibold dark:text-slate-300">Juliarta</span>
+            </a>
+            <div class="flex items-center order-2 md:order-last">
+                <button id="theme-button" class="cursor-pointer flex p-2 items-center rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                    <i id="theme-icon" class="fa-solid fa-moon w-5 h-5 dark:text-slate-300 flex items-center justify-center"></i>
+                </button>
+                <button id="humberger-button" class="ml-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                    <i id="humberger-icon" class="fa-solid fa-bars w-5 h-5 flex items-center justify-center"></i>
+                </button>
+            </div>
+            <div id="navbar-links" class="hidden w-full order-last md:order-2 md:block md:w-auto">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 bg-white md:bg-transparent rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                    <li>
+                        <a href="#home" class="block py-2 pl-3 pr-4 rounded text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary dark:hover:text-black md:p-0">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="block py-2 pl-3 pr-4 rounded text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary dark:hover:text-black md:p-0">About</a>
+                    </li>
+                    <li>
+                        <a href="#education" class="block py-2 pl-3 pr-4 rounded text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary dark:hover:text-black md:p-0">Education</a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="block py-2 pl-3 pr-4 rounded text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-primary dark:hover:text-black md:p-0">Experience</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto">
+        <div id="home" class="w-full min-h-screen relative flex flex-col-reverse md:grid md:grid-cols-2 items-center justify-center gap-4 py-20">
+            <div class="w-full flex flex-col items-center md:items-start justify-start md:justify-center text-center md:text-start">
+                <h1 data-aos="fade-up" class="font-bold text-3xl lg:text-4xl xl:text-5xl dark:text-slate-300">Hi I'm Juliarta</h1>
+                <h3 data-aos="fade-up" data-aos-delay="50" class="font-semibold text-md md:text-lg lg:text-xl xl:text-2xl mt-3 dark:text-slate-400">I'm a <span id="iam-a" class="p-2 bg-primary w-max dark:text-black">Web Developer</span></h3>
+                <p data-aos="fade-up" data-aos-delay="100" class="text-xs md:text-sm lg:text-md mt-5 dark:text-slate-400">Let’s Connect! Ready to collaborate on innovative projects</p>
+                <div class="flex gap-3 mt-3">
+                    <a href="https://github.com/juliarta99" data-aos="zoom-in-up" data-aos-delay="200" target="_blank">
+                        <button class="hover:bg-white hover:shadow-white transition-all duration-300 bg-primary p-2 rounded-full shadow-lg shadow-primary w-12 h-12">
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </a>
+                    <a href="https://www.instagram.com/n.juliarta" data-aos="zoom-in-up" data-aos-delay="200" target="_blank">
+                        <button class="hover:bg-white hover:shadow-white transition-all duration-300 bg-primary p-2 rounded-full shadow-lg shadow-primary w-12 h-12">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ngurah-juliarta/" data-aos="zoom-in-up" data-aos-delay="200" target="_blank">
+                        <button class="hover:bg-white hover:shadow-white transition-all duration-300 bg-primary p-2 rounded-full shadow-lg shadow-primary w-12 h-12">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full flex col items-center justify-center">
+                <div class="w-max-300 w-3/5 sm:w-1/2 lg:w-7/12 relative aspect-square bg-primary rounded-xl before:bg-primary before:absolute before:w-full before:h-full before:rounded-xl before:bg-opacity-50 hover:before:-translate-x-[5%] hover:before:translate-y-[5%] hover:translate-x-[3%] hover:-translate-y-[3%] transition-all duration-500 before:transition-all before:duration-500">
+                    <div class="before:bg-primary before:rounded-full before:w-10 before:h-10 before:absolute before:-top-10 before:-left-14 before:animate-bounce before:shadow-lg before:shadow-primary after:bg-primary after:rounded-full after:w-10 after:h-10 after:absolute after:-bottom-10 after:-right-14 after:animate-bounce after:shadow-lg after:shadow-primary"></div>
+                    <img 
+                        class="w-full absolute bottom-0 rounded-lg"
+                        src="public/foto.png" 
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="w-full min-h-screen relative flex flex-col md:flex-row items-center gap-4 py-20">
+            <div class="p-5 md:p-0 w-3/4 sm:w-1/2 md:w-1/3 xl:w-1/4 h-max mx-auto relative">
+                <div class="before:bg-primary before:rounded-full before:w-16 md:before:w-20 before:h-16 md:before:h-20 before:absolute before:top-0 before:left-0 before:shadow-lg before:shadow-primary after:bg-primary after:rounded-full after:w-16 md:after:w-20 after:h-16 md:after:h-20 after:absolute after:bottom-0 after:right-0 after:shadow-lg after:shadow-primary animate-in-out"></div>
+                <img 
+                    data-aos="fade-up"
+                    src="public/foto-latar.jpg" 
+                    alt="Foto Profile" 
+                    class='w-full object-cover rounded border-4 border-primary border-opacity-30 relative z-10' 
+                />
+            </div>
+            <div class="space-y-4 text-justify mt-5 md:mt-0 ml-0 md:ml-10 md:w-2/3 xl:w-3/4 dark:text-slate-400">
+                <p data-aos="fade-up">Hello 👋, my name is <span class="font-bold">Si Ngurah Putu Juliarta</span>, but you can call me Juli or Ngurah. I'm a Web Developer and a student based in Badung, Bali, with a strong passion for programming.</p>
+                <div data-aos="fade-up" data-aos-delay="300" class="grid grid-cols-1 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:text-md text-sm">
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <p class="text-gray-900">Denpasar, 09 Juli 2006</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Tempat, Tanggal Lahir</h4>
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Saya lahir di Denpasar, Bali pada tanggal 09 Juli 2006</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-venus-mars"></i>
+                                <p class="text-gray-900">Laki - Laki</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Jenis Kelamin</h4>
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Saya adalah seorang pria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 lg:text-md text-sm">
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="https://himaif-udayana.com/" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <p class="text-gray-900">Informatika</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Program Studi</h4>
+                                <img src="public/logo-himaif.png" alt="Image" class="w-2/3 object-contain rounded-md mx-auto">
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Saya adalah mahasiswa Program Studi Informatika</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="https://bemfmipaunud.com/" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-school"></i>
+                                <p class="text-gray-900">MIPA</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Fakultas</h4>
+                                <img src="public/logo-fmipa.png" alt="Image" class="w-2/3 object-contain rounded-md mx-auto">
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Informatika Udayana merupakan bagian dari Fakultas Matematika dan Ilmu Pengetahuan Alam</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="https://www.unud.ac.id/" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <p class="text-gray-900">Universitas Udayana</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Perguruan Tinggi</h4>
+                                <img src="public/logo-unud.png" alt="Image" class="w-2/3 object-contain rounded-md mx-auto">
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Saya merupakan mahasiswa aktif Universitas Udayana</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="https://wa.me/6289605880609" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-phone"></i>
+                                <p class="text-gray-900">089605880609</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Nomor Telephone</h4>
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Hubungi saya di nomor 089605880609</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="mailto:adij4255@gmail.com" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p class="text-gray-900">adij4255@gmail.com</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Email</h4>
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Silakan hubungi saya melalui email: adij4255@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="hover-card relative dark:text-slate-800 cursor-pointer">
+                            <a href="https://www.linkedin.com/in/ngurah-juliarta" target="_blank" class="link-hover-card bg-white shadow-2xl rounded-md py-3 px-4 flex items-center gap-2 hover:bg-primary hover:shadow-primary transition-all duration-300">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <p class="text-gray-900">Ngurah Juliarta</p>
+                            </a>
+                            <div class="tooltip hidden absolute bg-white z-10 rounded-md shadow-lg p-3 max-w-[200px]">
+                                <h4 class="text-md md:text-lg font-semibold text-start">Linkedin</h4>
+                                <p class="text-xs md:text-sm text-gray-600 text-start">Kunjungi profil LinkedIn saya di: <a href="">Ngurah Juliarta</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="education" class="w-full min-h-screen relative py-20">
+            <h3 data-aos="fade-up" class="text-sm md:text-md text-primary text-center">Education</h3>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="font-bold text-xl md:text-2xl uppercase text-center dark:text-slate-300">Riwayat Pendidikan</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-center text-sm md:text-md dark:text-slate-400">Fokus pada studi dan pengembangan keterampilan</p>
+            <div class="relative grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-x-24 md:gap-y-10 mt-10 text-center md:text-start">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 h-full border-l-4 border-dashed border-primary">
+                </div>
+                <div class="pt-9 md:pt-4 relative bg-white flex flex-col justify-center p-4 rounded-lg shadow-2xl w-full h-max">
+                    <div class="before:absolute before:top-0 md:before:top-1/2 before:-translate-y-1/2 before:h-14 before:w-14 before:bg-primary before:rounded-full before:flex before:items-center before:justify-center before:font-bold before:content-['SD'] before:right-1/2 md:before:right-0 before:translate-x-[50%] md:after:absolute md:after:top-1/2 md:after:-translate-y-1/2 md:after:w-full md:after:border-t-4 md:after:border-dashed md:after:border-primary md:after:-z-10 md:after:-right-12"></div>
+                    <h1 data-aos="zoom-in" class="text-lg md:text-xl font-bold">SDN 1 Sempidi</h1>
+                    <h3 data-aos="zoom-in" data-aos-delay="100" class="text-sm md:text-md">2012 - 2018</h3>
+                </div>
+                <div class="pt-9 md:pt-4 relative bg-white flex flex-col justify-center p-4 rounded-lg shadow-2xl w-full h-max md:pl-10 md:mt-8">
+                    <div class="before:absolute before:top-0 md:before:top-1/2 before:-translate-y-1/2 before:h-14 before:w-14 before:bg-primary before:rounded-full before:flex before:items-center before:justify-center before:font-bold before:content-['SMP'] before:left-1/2 md:before:left-0 before:-translate-x-[50%] md:after:absolute md:after:top-1/2 md:after:-translate-y-1/2 md:after:w-full md:after:border-t-4 md:after:border-dashed md:after:border-primary md:after:-z-10 md:after:-left-12"
+                    ></div>
+                    <h1 data-aos="zoom-in" class="text-lg md:text-xl font-bold">SMP Negeri 5 Mengwi</h1>
+                    <h3 data-aos="zoom-in" data-aos-delay="100" class="text-sm md:text-md">2018 - 2021</h3>
+                </div>
+                <div class="pt-9 md:pt-4 relative bg-white flex flex-col justify-center p-4 rounded-lg shadow-2xl w-full h-max">
+                    <div class="before:absolute before:top-0 md:before:top-1/2 before:-translate-y-1/2 before:h-14 before:w-14 before:bg-primary before:rounded-full before:flex before:items-center before:justify-center before:font-bold before:content-['SMK'] before:right-1/2 md:before:right-0 before:translate-x-[50%] md:after:absolute md:after:top-1/2 md:after:-translate-y-1/2 md:after:w-full md:after:border-t-4 md:after:border-dashed md:after:border-primary md:after:-z-10 md:after:-right-12"></div>
+                    <h1 data-aos="zoom-in" class="text-lg md:text-xl font-bold">SMK Negeri 1 Denpasar</h1>
+                    <h3 data-aos="zoom-in" data-aos-delay="100" class="text-sm md:text-md">2021 - 2024</h3>
+                </div>
+                <div class="pt-9 md:pt-4 relative bg-white flex flex-col justify-center p-4 rounded-lg shadow-2xl w-full h-max md:pl-10 md:mt-8">
+                    <div class="before:absolute before:top-0 md:before:top-1/2 before:-translate-y-1/2 before:h-14 before:w-14 before:bg-primary before:rounded-full before:flex before:items-center before:justify-center before:font-bold before:content-['UNIV'] before:left-1/2 md:before:left-0 before:-translate-x-[50%] md:after:absolute md:after:top-1/2 md:after:-translate-y-1/2 md:after:w-full md:after:border-t-4 md:after:border-dashed md:after:border-primary md:after:-z-10 md:after:-left-12"
+                    ></div>
+                    <h1 data-aos="zoom-in" class="text-lg md:text-xl font-bold">Universitas Udayana</h1>
+                    <h3 data-aos="zoom-in" data-aos-delay="100" class="text-sm md:text-md">2024 - sekarang</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience" class="w-full min-h-screen relative py-20">
+            <h3 data-aos="fade-up" class="text-sm md:text-md text-primary text-center">Experience</h3>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="font-bold text-xl md:text-2xl uppercase text-center dark:text-slate-300">Pengalaman Saya</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-center text-sm md:text-md dark:text-slate-400">Berkompetisi di bidang teknologi dan mengerjakan proyek inovatif</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+                <a href="public/lomba-integer.png" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Juara 3 Lomba Programming INTEGER#5" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/lomba-integer.png" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Juara 3 Lomba Programming</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>INTEGER#5</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2023</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>HMJTI Undhiksa</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="public/lomba-infinity.jpg" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Juara 3 Lomba Web Design INFINITY 2023" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/lomba-infinity.jpg" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Juara 3 Lomba Web Design</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>INFINITY 2023</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2023</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>ITB Stikom Bali</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="public/lomba-itcc.jpg" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Juara 3 Lomba Cerdas Cermat ITCC 2023" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/lomba-itcc.jpg" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Juara 3 Lomba Cerdas Cermat</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>ITCC 2023</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2023</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>HMTI Udayana</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="public/lomba-parasict.jpg" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Juara 1 Lomba Cerdas Cermat PARAS ICT" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/lomba-parasict.jpg" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Juara 1 Lomba Cerdas Cermat</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>PARAS ICT XI</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2024</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>HIMA-TI INSTIKI</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="public/pkl-bamboo.png" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Praktik Kerja Lapangan di Bamboo Media" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/pkl-bamboo.png" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Praktik Kerja Lapangan</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>Bamboo Media</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2023</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>PT Bamboomedia Cipta Persada</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="public/pkl-iambehokky.png" data-aos="fade-up" data-aos-delay="100" data-fancybox data-caption="Praktik Kerja Lapangan di Iambehokky" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group">
+                    <div class="w-full aspect-[3/2] overflow-hidden">
+                        <img src="public/pkl-iambehokky.png" alt="Juara 3 Lomba Programming" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </div>
+                    <div class="p-3 flex flex-col gap-1">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Praktik Kerja Lapangan</h1>
+                            <h3 class='text-sm md:text-md text-gray-500'>Iambehokky</h3>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <p>2023</p>
+                        </div>
+                        <div class="flex gap-2 items-center text-xs md:text-sm text-gray-600">
+                            <i class="fa-solid fa-building"></i>
+                            <p>PT Bali Pustaka Digital</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="project" class="w-full min-h-screen relative py-20">
+            <h3 data-aos="fade-up" class="text-sm md:text-md text-primary text-center">Project</h3>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="font-bold text-xl md:text-2xl uppercase text-center dark:text-slate-300">Portofolio Karya</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-center text-sm md:text-md dark:text-slate-400">Saya memiliki koleksi proyek publik yang siap untuk dijelajahi</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-portfolio.png" data-fancybox data-caption="Portfolio Website" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-portfolio.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col h-full gap-1 justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Portfolio Website</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Website portfolio yang saya</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://github.com/juliarta99/juliarta99" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://juliarta.vercel.app/" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-wedding-otaku.png" data-fancybox data-caption="Wedding Otaku" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-wedding-otaku.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Wedding Otaku</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Web ini mengusung tema Jepang yang elegan dengan nuansa tradisional, termasuk warna pastel, motif sakura, dan elemen desain yang mencerminkan budaya Jepang.</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://weddingotaku.com/guritmaulinadesu" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-schedule.png" data-fancybox data-caption="Time Schedule" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-schedule.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Time Schedule</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Website ini dirancang untuk memberikan kemudahan bagi klien dalam mengelola jadwal pemasaran digital mereka dengan antarmuka yang modern dan intuitif.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-remodeled.png" data-fancybox data-caption="Remodeled AI" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-remodeled.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Remodeled AI</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Mendesain ulang situs web remodelai.com untuk memberikan desain visual yang menarik dan meningkatkan pengalaman pengguna sejak kunjungan pertama agar lebih istimewa.</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://remodeledai.vercel.app/" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-track-anime.png" data-fancybox data-caption="Track Anime" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-track-anime.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Track Anime</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Website pelacakan anime yang memungkinkan pengguna untuk menemukan informasi tentang anime dengan cepat dan mudah, menggunakan API dari Trace Moe API untuk mendapatkan gambar dan data terkait.</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://github.com/juliarta99/track-anime" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://track-anime.vercel.app/" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-anime-app.png" data-fancybox data-caption="Anime App" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-anime-app.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>Anime App</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Website daftar anime menggunakan Api dari Jikan Api.</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://github.com/juliarta99/anime-app" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://anime-app-juliarta.vercel.app/" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="w-full rounded-lg overflow-hidden bg-white shadow-2xl hover:scale-105 hover:shadow-primary hover:bg-primary transition-all duration-300 group h-full flex flex-col">
+                    <a href="public/project-e-commerce.png" data-fancybox data-caption="Website E-commerce" class="w-full aspect-[3/2] h-full overflow-hidden">
+                        <img src="public/project-e-commerce.png" alt="Project" class="w-full object-cover h-full group-hover:scale-110 transition-all duration-300">
+                    </a>
+                    <div class="p-3 flex flex-col gap-1 h-full justify-between">
+                        <div class="">
+                            <h1 class='font-bold text-md md:text-lg'>E-commerce</h1>
+                            <h3 class='text-sm md:text-md text-gray-500 group-hover:text-slate-900 transition-all duration-300'>Web E-commerce dengan hak akses pemilik toko, pembeli, dan admin situs web, serta dilengkapi dengan payment gateway menggunakan Midtrans.</h3>
+                        </div>
+                        <div class="flex gap-3 items-center justify-center mt-3 text-lg md:text-xl text-gray-600">
+                            <a href="https://github.com/juliarta99/E-commerce" target="_blank" class="hover:bg-white hover:text-slate-900 p-2 rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bg-slate-200 shadow-lg dark:bg-slate-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-center">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Juliarta</span>
+            <div class="text-xs text-gray-500 sm:text-center dark:text-gray-400 flex flex-col">
+                <span>Built with <span class="font-bold">TailwindCSS</span></span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
